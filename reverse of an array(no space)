@@ -1,0 +1,26 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner p = new Scanner(System.in);
+
+        System.out.println("The number of array elements is:");
+        int r = p.nextInt();
+        p.nextLine(); // consume the leftover newline
+
+        int[] arr = new int[r];
+        System.out.println("Enter the digits without space:");
+        String input = p.nextLine(); // read the entire line as a string
+
+        for (int i = 0; i < r; i++) {
+            arr[i] = input.charAt(i) - '0'; // convert each char to int
+        }
+
+        System.out.println("The reversed array:");
+        for (int i = r - 1; i >= 0; i--) {
+            System.out.print(arr[i]);
+        }
+
+        p.close();
+    }
+}
